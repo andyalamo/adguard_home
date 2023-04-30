@@ -5,8 +5,8 @@ services:
     container_name: adguardhome
     restart: unless-stopped
     volumes:
-      - /my/own/workdir:/opt/adguardhome/work
-      - /my/own/confdir:/opt/adguardhome/conf
+      - ${path_local_work}:/opt/adguardhome/work
+      - ${path_local_conf}:/opt/adguardhome/conf
     ports:
       - "53:53/tcp"
       - "53:53/udp"
